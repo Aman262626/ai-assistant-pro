@@ -40,7 +40,6 @@
             padding: 20px;
         }
 
-        /* Header */
         .header {
             background: var(--color-bg-secondary);
             border-radius: var(--radius-lg);
@@ -64,7 +63,6 @@
             font-size: 14px;
         }
 
-        /* API Config Section */
         .config-section {
             background: var(--color-bg-secondary);
             border-radius: var(--radius-lg);
@@ -81,47 +79,11 @@
             color: var(--color-accent);
         }
 
-        .config-row {
+        .status-row {
             display: flex;
             gap: 15px;
-            margin-bottom: 15px;
             align-items: center;
             flex-wrap: wrap;
-        }
-
-        .config-input {
-            flex: 1;
-            min-width: 250px;
-            background: var(--color-bg-tertiary);
-            border: 1px solid var(--color-border);
-            color: var(--color-text-primary);
-            padding: 12px 16px;
-            border-radius: var(--radius-sm);
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .config-input:focus {
-            outline: none;
-            border-color: var(--color-accent);
-            box-shadow: 0 0 0 3px rgba(32, 184, 198, 0.2);
-        }
-
-        .save-btn {
-            background: linear-gradient(135deg, var(--color-accent) 0%, #2d9da8 100%);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(32, 184, 198, 0.3);
-        }
-
-        .save-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(32, 184, 198, 0.4);
         }
 
         .status-indicator {
@@ -129,6 +91,9 @@
             border-radius: var(--radius-sm);
             font-size: 13px;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .status-connected {
@@ -143,7 +108,12 @@
             border: 1px solid rgba(239, 68, 68, 0.3);
         }
 
-        /* Main Content Area */
+        .status-checking {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
         .main-content {
             display: grid;
             grid-template-columns: 250px 1fr;
@@ -157,7 +127,6 @@
             }
         }
 
-        /* Sidebar */
         .sidebar {
             background: var(--color-bg-secondary);
             border-radius: var(--radius-lg);
@@ -206,7 +175,6 @@
             color: var(--color-text-secondary);
         }
 
-        /* Chat Area */
         .chat-container {
             background: var(--color-bg-secondary);
             border-radius: var(--radius-lg);
@@ -285,46 +253,17 @@
             font-weight: 600;
         }
 
-        /* Image/Note Cards */
-        .response-card {
-            background: var(--color-bg-tertiary);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-md);
-            padding: 16px;
-            margin-top: 10px;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 10px;
-            color: var(--color-accent);
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        .card-content img {
-            max-width: 100%;
-            border-radius: var(--radius-sm);
-            margin-top: 8px;
-        }
-
-        /* Enhanced Input Area */
         .input-area {
             background: var(--color-bg-tertiary);
             border: 2px solid var(--color-border);
             border-radius: var(--radius-lg);
             padding: 15px;
             transition: all 0.3s ease;
-            position: relative;
         }
 
         .input-area:focus-within {
             border-color: var(--color-accent);
-            box-shadow: 0 0 0 4px rgba(32, 184, 198, 0.15),
-                        0 8px 24px rgba(32, 184, 198, 0.2);
-            transform: translateY(-2px);
+            box-shadow: 0 0 0 4px rgba(32, 184, 198, 0.15);
         }
 
         .input-wrapper {
@@ -357,7 +296,6 @@
         .tool-btn:hover {
             border-color: var(--color-accent);
             color: var(--color-accent);
-            transform: scale(1.05);
         }
 
         .tool-btn.active {
@@ -383,37 +321,6 @@
             outline: none;
         }
 
-        #messageInput::placeholder {
-            color: var(--color-text-secondary);
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .icon-btn {
-            background: var(--color-bg-secondary);
-            border: 1px solid var(--color-border);
-            color: var(--color-text-secondary);
-            width: 40px;
-            height: 40px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
-
-        .icon-btn:hover {
-            border-color: var(--color-accent);
-            color: var(--color-accent);
-            transform: scale(1.1);
-        }
-
         .send-btn {
             background: linear-gradient(135deg, var(--color-accent) 0%, #2d9da8 100%);
             color: white;
@@ -423,12 +330,10 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(32, 184, 198, 0.3);
         }
 
         .send-btn:hover:not(:disabled) {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(32, 184, 198, 0.4);
         }
 
         .send-btn:disabled {
@@ -436,86 +341,6 @@
             cursor: not-allowed;
         }
 
-        /* File Upload Preview */
-        .file-preview {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-        }
-
-        .file-item {
-            background: var(--color-bg-secondary);
-            border: 1px solid var(--color-border);
-            padding: 8px 12px;
-            border-radius: var(--radius-sm);
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .file-remove {
-            background: rgba(239, 68, 68, 0.2);
-            color: #ef4444;
-            border: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 12px;
-        }
-
-        /* Recording Indicator */
-        .recording-indicator {
-            background: rgba(239, 68, 68, 0.2);
-            border: 1px solid #ef4444;
-            color: #ef4444;
-            padding: 8px 16px;
-            border-radius: var(--radius-sm);
-            font-size: 13px;
-            display: none;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 10px;
-        }
-
-        .recording-indicator.active {
-            display: flex;
-        }
-
-        .pulse {
-            width: 8px;
-            height: 8px;
-            background: #ef4444;
-            border-radius: 50%;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-
-        /* Live Mode Indicator */
-        .live-mode {
-            background: rgba(34, 197, 94, 0.2);
-            border: 1px solid #22c55e;
-            color: #22c55e;
-            padding: 8px 16px;
-            border-radius: var(--radius-sm);
-            font-size: 13px;
-            display: none;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 10px;
-        }
-
-        .live-mode.active {
-            display: flex;
-        }
-
-        /* Thinking Animation */
         .thinking {
             display: none;
             align-items: center;
@@ -547,111 +372,67 @@
             40% { transform: scale(1.2); opacity: 1; }
         }
 
-        /* Hidden file input */
-        #fileInput {
-            display: none;
-        }
-
-        /* Utility Classes */
-        .hidden {
-            display: none !important;
-        }
-
-        .mt-2 {
-            margin-top: 8px;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .app-container {
-                padding: 15px;
-            }
-
             .main-content {
                 grid-template-columns: 1fr;
             }
-
             .sidebar {
                 position: static;
             }
-
             .message-content {
                 max-width: 90%;
-            }
-
-            .config-row {
-                flex-direction: column;
-            }
-
-            .config-input {
-                width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="app-container">
-        <!-- Header -->
         <div class="header">
             <h1>🚀 AI Assistant Pro - Perplexity Powered</h1>
             <p>आपका intelligent coding companion - Upload, Voice, Live Conversation के साथ</p>
         </div>
 
-        <!-- API Configuration -->
         <div class="config-section">
-            <div class="config-title">⚙️ Perplexity API Configuration</div>
-            <div class="config-row">
-                <input 
-                    type="text" 
-                    id="apiEndpoint" 
-                    class="config-input" 
-                    placeholder="API Endpoint (e.g., https://your-render-app.onrender.com/api/chat)"
-                    value=""
-                />
-                <input 
-                    type="password" 
-                    id="apiKey" 
-                    class="config-input" 
-                    placeholder="Perplexity API Key (optional if handled by backend)"
-                />
-                <button class="save-btn" onclick="saveApiConfig()">💾 Save Config</button>
-                <div id="apiStatus" class="status-indicator status-disconnected">Not Connected</div>
+            <div class="config-title">⚙️ System Status</div>
+            <div class="status-row">
+                <div id="apiStatus" class="status-indicator status-checking">
+                    <div class="pulse"></div>
+                    <span>Checking connection...</span>
+                </div>
+                <span style="color: var(--color-text-secondary); font-size: 13px;" id="apiEndpointDisplay">Backend: /api/chat</span>
             </div>
         </div>
 
-        <!-- Main Content -->
         <div class="main-content">
-            <!-- Sidebar -->
             <div class="sidebar">
                 <h3>⚡ Quick Shortcuts</h3>
-                <div class="shortcut-item" onclick="insertPrompt('Explain this code:')">
+                <div class="shortcut-item" onclick="insertPrompt('Python में REST API बनाना सीखाओ')">
                     <div class="shortcut-icon">🐍</div>
                     <div class="shortcut-title">REST API Tutorial</div>
                     <div class="shortcut-desc">Python में REST API बनाना सीखें</div>
                 </div>
-                <div class="shortcut-item" onclick="insertPrompt('Debug this code:')">
+                <div class="shortcut-item" onclick="insertPrompt('Mera code debug karo')">
                     <div class="shortcut-icon">🐛</div>
                     <div class="shortcut-title">Debug Code</div>
                     <div class="shortcut-desc">Code errors को fix करें</div>
                 </div>
-                <div class="shortcut-item" onclick="insertPrompt('Create a full stack app with:')">
+                <div class="shortcut-item" onclick="insertPrompt('Full stack app kaise banaye')">
                     <div class="shortcut-icon">⚛️</div>
                     <div class="shortcut-title">Full Stack</div>
                     <div class="shortcut-desc">Frontend-Backend integration</div>
                 </div>
-                <div class="shortcut-item" onclick="insertPrompt('Teach me data structures:')">
+                <div class="shortcut-item" onclick="insertPrompt('Data Structures ke basics samjhao')">
                     <div class="shortcut-icon">📚</div>
                     <div class="shortcut-title">Learn DSA</div>
                     <div class="shortcut-desc">Data Structures basics</div>
                 </div>
-                <div class="shortcut-item" onclick="insertPrompt('Help me prepare for:')">
+                <div class="shortcut-item" onclick="insertPrompt('NTPC aur Group D exam ki taiyari kaise karein')">
                     <div class="shortcut-icon">🎯</div>
                     <div class="shortcut-title">Exam Prep</div>
                     <div class="shortcut-desc">NTPC, Group D preparation</div>
                 </div>
             </div>
 
-            <!-- Chat Container -->
             <div class="chat-container">
                 <div class="messages-area" id="messagesArea">
                     <div class="message message-assistant">
@@ -671,7 +452,6 @@
                     </div>
                 </div>
 
-                <!-- Thinking Indicator -->
                 <div class="thinking" id="thinkingIndicator">
                     <span>Thinking</span>
                     <div class="dot"></div>
@@ -679,47 +459,17 @@
                     <div class="dot"></div>
                 </div>
 
-                <!-- Input Area -->
                 <div class="input-area">
-                    <!-- Recording Indicator -->
-                    <div class="recording-indicator" id="recordingIndicator">
-                        <div class="pulse"></div>
-                        <span>Recording...</span>
-                    </div>
-
-                    <!-- Live Mode Indicator -->
-                    <div class="live-mode" id="liveModeIndicator">
-                        <div class="pulse"></div>
-                        <span>Live Conversation Active</span>
-                    </div>
-
-                    <!-- File Preview -->
-                    <div class="file-preview" id="filePreview"></div>
-
-                    <!-- Input Tools -->
                     <div class="input-tools">
-                        <button class="tool-btn" onclick="toggleUpload()" title="Upload Files">
-                            📎 Upload
-                        </button>
-                        <button class="tool-btn" id="micBtn" onclick="toggleMic()" title="Voice Input">
-                            🎤 Mic
-                        </button>
-                        <button class="tool-btn" id="liveBtn" onclick="toggleLiveMode()" title="Live Conversation">
-                            🔴 Live
-                        </button>
-                        <button class="tool-btn" onclick="insertNote()" title="Add Note">
-                            📝 Note
-                        </button>
                         <button class="tool-btn" onclick="clearChat()" title="Clear Chat">
                             🗑️ Clear
                         </button>
                     </div>
 
-                    <!-- Input Wrapper -->
                     <div class="input-wrapper">
                         <textarea 
                             id="messageInput" 
-                            placeholder="Type your message... (या voice/upload use करें)"
+                            placeholder="Type your message... कुछ भी पूछें!"
                             rows="1"
                             onkeydown="handleKeyDown(event)"
                             oninput="autoResize(this)"
@@ -735,75 +485,39 @@
         </div>
     </div>
 
-    <!-- Hidden File Input -->
-    <input type="file" id="fileInput" multiple accept="image/*,.pdf,.txt,.doc,.docx" onchange="handleFileSelect(event)">
-
     <script>
-        // Global State
-        let apiConfig = {
-            endpoint: '',
-            apiKey: ''
-        };
-        let uploadedFiles = [];
-        let isRecording = false;
-        let isLiveMode = false;
-        let mediaRecorder = null;
-        let audioChunks = [];
+        // Auto-configure API endpoint (same domain)
+        const API_ENDPOINT = '/api/chat';
 
-        // Load saved config on page load
-        window.onload = function() {
-            const savedEndpoint = localStorage.getItem('apiEndpoint');
-            const savedKey = localStorage.getItem('apiKey');
-            if (savedEndpoint) {
-                document.getElementById('apiEndpoint').value = savedEndpoint;
-                apiConfig.endpoint = savedEndpoint;
-            }
-            if (savedKey) {
-                document.getElementById('apiKey').value = savedKey;
-                apiConfig.apiKey = savedKey;
-            }
-            updateApiStatus();
+        // Check API status on load
+        window.onload = async function() {
+            await checkApiStatus();
         };
 
-        // Save API Configuration
-        function saveApiConfig() {
-            const endpoint = document.getElementById('apiEndpoint').value.trim();
-            const apiKey = document.getElementById('apiKey').value.trim();
-            
-            if (!endpoint) {
-                alert('कृपया API Endpoint दर्ज करें!');
-                return;
-            }
-
-            apiConfig.endpoint = endpoint;
-            apiConfig.apiKey = apiKey;
-
-            localStorage.setItem('apiEndpoint', endpoint);
-            localStorage.setItem('apiKey', apiKey);
-
-            updateApiStatus(true);
-            addSystemMessage('✅ API Configuration saved successfully!');
-        }
-
-        // Update API Status
-        function updateApiStatus(connected = false) {
+        async function checkApiStatus() {
             const statusEl = document.getElementById('apiStatus');
-            if (apiConfig.endpoint || connected) {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                
+                if (data.api_key_configured) {
+                    statusEl.className = 'status-indicator status-connected';
+                    statusEl.innerHTML = '<span>✓ Connected & Ready</span>';
+                } else {
+                    statusEl.className = 'status-indicator status-disconnected';
+                    statusEl.innerHTML = '<span>⚠ API Key Not Configured</span>';
+                }
+            } catch (error) {
                 statusEl.className = 'status-indicator status-connected';
-                statusEl.textContent = '✓ Connected';
-            } else {
-                statusEl.className = 'status-indicator status-disconnected';
-                statusEl.textContent = 'Not Connected';
+                statusEl.innerHTML = '<span>✓ Backend Running</span>';
             }
         }
 
-        // Auto-resize textarea
         function autoResize(textarea) {
             textarea.style.height = 'auto';
             textarea.style.height = textarea.scrollHeight + 'px';
         }
 
-        // Handle Enter key
         function handleKeyDown(event) {
             if (event.key === 'Enter' && !event.shiftKey) {
                 event.preventDefault();
@@ -811,114 +525,13 @@
             }
         }
 
-        // Insert prompt from shortcuts
         function insertPrompt(prompt) {
             const input = document.getElementById('messageInput');
-            input.value = prompt + ' ';
+            input.value = prompt;
             input.focus();
+            autoResize(input);
         }
 
-        // Toggle file upload
-        function toggleUpload() {
-            document.getElementById('fileInput').click();
-        }
-
-        // Handle file selection
-        function handleFileSelect(event) {
-            const files = Array.from(event.target.files);
-            uploadedFiles = uploadedFiles.concat(files);
-            displayFilePreview();
-        }
-
-        // Display file preview
-        function displayFilePreview() {
-            const preview = document.getElementById('filePreview');
-            preview.innerHTML = '';
-            
-            uploadedFiles.forEach((file, index) => {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.innerHTML = `
-                    <span>📎 ${file.name}</span>
-                    <button class="file-remove" onclick="removeFile(${index})">×</button>
-                `;
-                preview.appendChild(fileItem);
-            });
-        }
-
-        // Remove file
-        function removeFile(index) {
-            uploadedFiles.splice(index, 1);
-            displayFilePreview();
-        }
-
-        // Toggle Mic
-        async function toggleMic() {
-            const micBtn = document.getElementById('micBtn');
-            const indicator = document.getElementById('recordingIndicator');
-
-            if (!isRecording) {
-                try {
-                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                    mediaRecorder = new MediaRecorder(stream);
-                    audioChunks = [];
-
-                    mediaRecorder.ondataavailable = (event) => {
-                        audioChunks.push(event.data);
-                    };
-
-                    mediaRecorder.onstop = () => {
-                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-                        const audioFile = new File([audioBlob], 'voice-recording.wav', { type: 'audio/wav' });
-                        uploadedFiles.push(audioFile);
-                        displayFilePreview();
-                    };
-
-                    mediaRecorder.start();
-                    isRecording = true;
-                    micBtn.classList.add('active');
-                    indicator.classList.add('active');
-                } catch (error) {
-                    alert('Microphone access denied! कृपया permissions check करें।');
-                }
-            } else {
-                mediaRecorder.stop();
-                mediaRecorder.stream.getTracks().forEach(track => track.stop());
-                isRecording = false;
-                micBtn.classList.remove('active');
-                indicator.classList.remove('active');
-            }
-        }
-
-        // Toggle Live Mode
-        function toggleLiveMode() {
-            const liveBtn = document.getElementById('liveBtn');
-            const indicator = document.getElementById('liveModeIndicator');
-
-            isLiveMode = !isLiveMode;
-
-            if (isLiveMode) {
-                liveBtn.classList.add('active');
-                indicator.classList.add('active');
-                addSystemMessage('🔴 Live Conversation Mode activated! Ab aap continuously chat kar sakte hain.');
-            } else {
-                liveBtn.classList.remove('active');
-                indicator.classList.remove('active');
-                addSystemMessage('Live Conversation Mode deactivated.');
-            }
-        }
-
-        // Insert Note
-        function insertNote() {
-            const input = document.getElementById('messageInput');
-            const note = prompt('Enter your note:');
-            if (note) {
-                input.value += `\n📝 Note: ${note}\n`;
-                input.focus();
-            }
-        }
-
-        // Clear Chat
         function clearChat() {
             if (confirm('क्या आप chat history clear करना चाहते हैं?')) {
                 const messagesArea = document.getElementById('messagesArea');
@@ -927,7 +540,6 @@
             }
         }
 
-        // Add System Message
         function addSystemMessage(message) {
             const messagesArea = document.getElementById('messagesArea');
             const messageDiv = document.createElement('div');
@@ -940,77 +552,54 @@
             messagesArea.scrollTop = messagesArea.scrollHeight;
         }
 
-        // Add User Message
-        function addUserMessage(text, files = []) {
+        function addUserMessage(text) {
             const messagesArea = document.getElementById('messagesArea');
             const messageDiv = document.createElement('div');
             messageDiv.className = 'message message-user';
-            
-            let fileContent = '';
-            if (files.length > 0) {
-                fileContent = '<div class="mt-2">';
-                files.forEach(file => {
-                    fileContent += `<div>📎 ${file.name}</div>`;
-                });
-                fileContent += '</div>';
-            }
-
             messageDiv.innerHTML = `
                 <div class="message-label">You</div>
-                <div class="message-content">
-                    ${text}
-                    ${fileContent}
-                </div>
+                <div class="message-content">${escapeHtml(text)}</div>
             `;
             messagesArea.appendChild(messageDiv);
             messagesArea.scrollTop = messagesArea.scrollHeight;
         }
 
-        // Add Assistant Message
-        function addAssistantMessage(text, hasImage = false, imageUrl = '') {
+        function addAssistantMessage(text) {
             const messagesArea = document.getElementById('messagesArea');
             const messageDiv = document.createElement('div');
             messageDiv.className = 'message message-assistant';
-            
-            let imageContent = '';
-            if (hasImage && imageUrl) {
-                imageContent = `
-                    <div class="response-card">
-                        <div class="card-header">🖼️ Generated Image</div>
-                        <div class="card-content">
-                            <img src="${imageUrl}" alt="AI Generated Image">
-                        </div>
-                    </div>
-                `;
-            }
-
             messageDiv.innerHTML = `
                 <div class="message-label">AI Assistant</div>
-                <div class="message-content">
-                    ${text}
-                    ${imageContent}
-                </div>
+                <div class="message-content">${formatResponse(text)}</div>
             `;
             messagesArea.appendChild(messageDiv);
             messagesArea.scrollTop = messagesArea.scrollHeight;
         }
 
-        // Send Message
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function formatResponse(text) {
+            // Convert markdown-style code blocks
+            text = text.replace(/```([\s\S]*?)```/g, '<pre style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; overflow-x: auto;"><code>$1</code></pre>');
+            // Convert line breaks
+            text = text.replace(/\n/g, '<br>');
+            return text;
+        }
+
         async function sendMessage() {
             const input = document.getElementById('messageInput');
             const message = input.value.trim();
 
-            if (!message && uploadedFiles.length === 0) {
-                return;
-            }
-
-            if (!apiConfig.endpoint) {
-                alert('कृपया पहले API Configuration save करें!');
+            if (!message) {
                 return;
             }
 
             // Add user message
-            addUserMessage(message, uploadedFiles);
+            addUserMessage(message);
 
             // Clear input
             input.value = '';
@@ -1025,42 +614,28 @@
             sendBtn.disabled = true;
 
             try {
-                // Prepare FormData
-                const formData = new FormData();
-                formData.append('message', message);
-                
-                if (apiConfig.apiKey) {
-                    formData.append('api_key', apiConfig.apiKey);
-                }
-
-                // Add files
-                uploadedFiles.forEach(file => {
-                    formData.append('files', file);
-                });
-
-                // Send to API
-                const response = await fetch(apiConfig.endpoint, {
+                const response = await fetch(API_ENDPOINT, {
                     method: 'POST',
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: message
+                    })
                 });
-
-                if (!response.ok) {
-                    throw new Error(`API Error: ${response.status}`);
-                }
 
                 const data = await response.json();
                 
-                // Display assistant response
-                addAssistantMessage(
-                    data.response || data.message || 'Response received successfully!',
-                    data.hasImage || false,
-                    data.imageUrl || ''
-                );
+                if (data.status === 'success' && data.response) {
+                    addAssistantMessage(data.response);
+                } else {
+                    addAssistantMessage('❌ Error: ' + (data.error || 'Unknown error occurred'));
+                }
 
             } catch (error) {
                 console.error('Error:', error);
                 addAssistantMessage(
-                    `❌ Error: ${error.message}<br><br>कृपया अपना API configuration check करें।`
+                    `❌ Connection error: ${error.message}<br><br>Backend ko check karein. Render par service sleep mode me ho sakti hai (first request slow hoga).`
                 );
             } finally {
                 // Hide thinking indicator
@@ -1068,13 +643,6 @@
                 
                 // Enable send button
                 sendBtn.disabled = false;
-
-                // Clear uploaded files
-                uploadedFiles = [];
-                displayFilePreview();
-
-                // Reset file input
-                document.getElementById('fileInput').value = '';
             }
         }
     </script>
